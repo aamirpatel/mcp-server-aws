@@ -36,3 +36,40 @@ The MCP server is a custom server with two tools:
    ```bash
    git clone <repository-url>
    cd mcp-aws
+
+2. Install dependencies:
+   ```bash
+   pip install -r requirements.txt
+
+3. Create a .env file in the root directory with the following content:
+   ```bash
+   AWS_ACCESS_KEY_ID=<your-aws-access-key-id>
+   AWS_SECRET_ACCESS_KEY=<your-aws-secret-access-key>
+   AWS_DEFAULT_REGION=<your-aws-region>
+   OPENAI_API_KEY=<your-openai-api-key>
+
+🏃‍♂️ Running the App
+
+1. Start the app:
+    ```bash
+    python openai-agent/agent.py
+
+2. Interact with the AI agent in the terminal:
+    --> To create an EC" instance 
+    Enter your command: Create an EC2 instance
+
+3. To terminate an EC2 instance:
+    --> Enter your command: Terminate EC2 instance with ID <instance-id>
+
+⚠️ Word of Caution
+IAM Role and Credentials: Please create AWS IAM roles and credentials at your own risk. Ensure you follow AWS best practices for security.
+Billing and Security: This app is a proof of concept (POC) and is intended for learning purposes only. We are not responsible for any billing issues or security incidents.
+
+📚 Learnings
+This project demonstrates:
+
+How to integrate MCP servers with OpenAI Agents SDK.
+How to build a simple AI-driven application for AWS resource management.
+Enjoy exploring the power of AI and MCP servers! 🌟
+
+
