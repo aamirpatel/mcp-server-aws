@@ -50,16 +50,37 @@ The MCP server is a custom server with two tools:
 
 🏃‍♂️ Running the App
 
-1. Start the app:
+### 🏃‍♂️ Running the App
+
+1. Clone and setup the environment:
     ```bash
-    python openai-agent/agent.py
+    git clone https://github.com/anirban1592/mcp-server-aws.git ai_agent
+    cd ai_agent
+    pip install uv .
+    uv venv .venv
+    ```
 
-2. Interact with the AI agent in the terminal:
-    --> To create an EC" instance 
+2. Activate the virtual environment:
+    - Windows: `.venv\Scripts\activate`
+    - Unix/MacOS: `source .venv/bin/activate`
+
+3. Navigate and run:
+    ```bash
+    cd openai-agent/
+    python3 agent.py
+    ```
+
+### 💬 Using the AI Agent
+
+1. To create an EC2 instance:
+    ```
     Enter your command: Create an EC2 instance
+    ```
 
-3. To terminate an EC2 instance:
-    --> Enter your command: Terminate EC2 instance with ID <instance-id>
+2. To terminate an EC2 instance:
+    ```
+    Enter your command: Terminate EC2 instance with ID <instance-id>
+    ```
 
 ⚠️ Word of Caution
 IAM Role and Credentials: Please create AWS IAM roles and credentials at your own risk. Ensure you follow AWS best practices for security.
