@@ -49,12 +49,10 @@ The MCP server is a custom server with two tools:
     source .venv/bin/activate
     ```
 
-3. Install dependencies:
-    ```bash
-    uv pip install .
+
     ```
 
-4. Create a `.env` file in the root directory:
+3. Create a `.env` file in the root directory:
     ```bash
     AWS_ACCESS_KEY_ID=<your-aws-access-key-id>
     AWS_SECRET_ACCESS_KEY=<your-aws-secret-access-key>
@@ -62,10 +60,10 @@ The MCP server is a custom server with two tools:
     OPENAI_API_KEY=<your-openai-api-key>
     ```
 
-5. Run the application:
+4. Run the application:
     ```bash
     cd openai-agent/
-    python3 agent.py
+    uv run agent.py
     ```
 
 ### 💬 Using the AI Agent
