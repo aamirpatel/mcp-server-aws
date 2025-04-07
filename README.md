@@ -31,40 +31,38 @@ The MCP server is a custom server with two tools:
    - `AWS_DEFAULT_REGION`
    - `OPENAI_API_KEY`
 
-### Installation
-1. Clone this repository:
-   ```bash
-   git clone <repository-url>
-   cd mcp-aws
+### 🏃‍♂️ Installation & Running the App
 
-2. Install dependencies:
-   ```bash
-   pip install -r requirements.txt
-
-3. Create a .env file in the root directory with the following content:
-   ```bash
-   AWS_ACCESS_KEY_ID=<your-aws-access-key-id>
-   AWS_SECRET_ACCESS_KEY=<your-aws-secret-access-key>
-   AWS_DEFAULT_REGION=<your-aws-region>
-   OPENAI_API_KEY=<your-openai-api-key>
-
-🏃‍♂️ Running the App
-
-### 🏃‍♂️ Running the App
-
-1. Clone and setup the environment:
+1. Clone the repository:
     ```bash
-    git clone https://github.com/anirban1592/mcp-server-aws.git ai_agent
-    cd ai_agent
-    pip install uv .
-    uv venv .venv
+    git clone https://github.com/anirban1592/mcp-server-aws.git
+    cd mcp-server-aws
     ```
 
-2. Activate the virtual environment:
-    - Windows: `.venv\Scripts\activate`
-    - Unix/MacOS: `source .venv/bin/activate`
+2. Create and activate virtual environment:
+    ```bash
+    pip install uv
+    uv venv .venv
+    # Windows
+    .venv\Scripts\activate
+    # Unix/MacOS
+    source .venv/bin/activate
+    ```
 
-3. Navigate and run:
+3. Install dependencies:
+    ```bash
+    pip install -r requirements.txt
+    ```
+
+4. Create a `.env` file in the root directory:
+    ```bash
+    AWS_ACCESS_KEY_ID=<your-aws-access-key-id>
+    AWS_SECRET_ACCESS_KEY=<your-aws-secret-access-key>
+    AWS_DEFAULT_REGION=<your-aws-region>
+    OPENAI_API_KEY=<your-openai-api-key>
+    ```
+
+5. Run the application:
     ```bash
     cd openai-agent/
     python3 agent.py
