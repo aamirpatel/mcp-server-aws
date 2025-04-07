@@ -60,7 +60,17 @@ The MCP server is a custom server with two tools:
     OPENAI_API_KEY=<your-openai-api-key>
     ```
 
-4. Run the application:
+4. Add EC2 instance configuration to `.env`:
+    ```bash
+    # EC2 Instance Configuration
+    AMI_ID=<your-ami-id>
+    INSTANCE_TYPE=<your-instance-type>
+    KEY_NAME=<your-key-pair-name>
+    SECURITY_GROUP_IDS=<your-security-group-ids>
+    AWS_REGION=<your-aws-region>
+    ```
+
+5. Run the application:
     ```bash
     cd openai-agent/
     uv run agent.py
