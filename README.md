@@ -80,15 +80,15 @@ The MCP server is a custom server with two tools:
     Enter your command: Terminate EC2 instance with ID <instance-id>
     ```
 
-⚠️ Word of Caution
-IAM Role and Credentials: Please create AWS IAM roles and credentials at your own risk. Ensure you follow AWS best practices for security.
-Billing and Security: This app is a proof of concept (POC) and is intended for learning purposes only. We are not responsible for any billing issues or security incidents.
+## ⚠️ Word of Caution
 
-📚 Learnings
+- **IAM Role and Credentials**: Please create AWS IAM roles and credentials at your own risk. Ensure you follow AWS best practices for security.
+- **Billing and Security**: This app is a proof of concept (POC) and is intended for learning purposes only. We are not responsible for any billing issues or security incidents.
+
+## 📚 Learnings
+
 This project demonstrates:
+1. How to integrate MCP servers with OpenAI Agents SDK
+2. How to build a simple AI-driven application for AWS resource management
 
-How to integrate MCP servers with OpenAI Agents SDK.
-How to build a simple AI-driven application for AWS resource management.
 Enjoy exploring the power of AI and MCP servers! 🌟
-
-
