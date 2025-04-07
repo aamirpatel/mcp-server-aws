@@ -55,12 +55,12 @@ The MCP server is a custom server with two tools:
 2. Create `.env` file as shown in prerequisites
 
 #### Option 1: Docker Setup (Recommended)
-3. Create `.env` file as shown above
-4. Build the Docker image:
+
+3. Build the Docker image:
      ```bash
      docker image build -t my-mcp .
      ```
-5. Run the container:
+4. Run the container:
      ```bash
      docker container run -it my-mcp
      ```
