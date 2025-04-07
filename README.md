@@ -2,6 +2,9 @@
 
 Welcome to **MCP-AWS**, a simple yet powerful AI-driven application that leverages OpenAI Agents and MCP servers to manage AWS EC2 instances. This app allows you to provision and terminate EC2 instances using natural language commands in your terminal. 🖥️✨
 
+
+---
+
 ## 🎥 Demo Video
 
 Watch the demo video to see MCP-AWS in action! 🚀
@@ -9,6 +12,7 @@ Watch the demo video to see MCP-AWS in action! 🚀
 [![Watch the Demo](https://img.youtube.com/vi/nT6w48w03NI/0.jpg)](https://youtu.be/nT6w48w03NI)
 
 ---
+
 
 ## 🌟 Features
 
@@ -56,8 +60,6 @@ The MCP server is a custom server with two tools:
     ```
 
 
-    ```
-
 3. Create a `.env` file in the root directory:
     ```bash
     AWS_ACCESS_KEY_ID=<your-aws-access-key-id>
@@ -93,10 +95,6 @@ The MCP server is a custom server with two tools:
     ```
     Enter your command: Terminate EC2 instance with ID <instance-id>
     ```
-
-
-
-
 
 ## ⚠️ Word of Caution
 
