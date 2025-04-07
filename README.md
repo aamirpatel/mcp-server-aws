@@ -36,7 +36,7 @@ The MCP server is a custom server with two tools:
 1. Clone the repository:
     ```bash
     git clone https://github.com/anirban1592/mcp-server-aws.git
-    cd mcp-server-aws
+    cd mcp-aws
     ```
 
 2. Create and activate virtual environment:
@@ -51,7 +51,7 @@ The MCP server is a custom server with two tools:
 
 3. Install dependencies:
     ```bash
-    pip install -r requirements.txt
+    uv pip install .
     ```
 
 4. Create a `.env` file in the root directory:
