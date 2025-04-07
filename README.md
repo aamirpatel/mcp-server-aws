@@ -33,56 +33,57 @@ The MCP server is a custom server with two tools:
 ## 🚀 Getting Started
 
 ### Prerequisites
-1. **Python 3.12+**: Ensure you have Python installed.
+1. **Python 3.12+** (for local setup) or **Docker** (for containerized setup)
 2. **AWS IAM Role**: Create an IAM role with the necessary permissions to manage EC2 instances.
 3. **Environment Variables**: Prepare a `.env` file with the following variables:
-   - `AWS_ACCESS_KEY_ID`
-   - `AWS_SECRET_ACCESS_KEY`
-   - `AWS_DEFAULT_REGION`
-   - `OPENAI_API_KEY`
+    - `AWS_ACCESS_KEY_ID`
+    - `AWS_SECRET_ACCESS_KEY`
+    - `AWS_DEFAULT_REGION`
+    - `OPENAI_API_KEY`
+    - `AMI_ID`
+    - `INSTANCE_TYPE`
+    - `KEY_NAME`
+    - `SECURITY_GROUP_IDS`
+    - `AWS_REGION`
 
-### 🏃‍♂️ Installation & Running the App
-
+### 🏃‍♂️ Running the App
 1. Clone the repository:
-    ```bash
-    git clone https://github.com/anirban1592/mcp-server-aws.git
-    cd mcp-aws
-    ```
+     ```bash
+     git clone https://github.com/anirban1592/mcp-server-aws.git
+     cd mcp-aws
+     ```
+2. Create `.env` file as shown in prerequisites
 
-2. Create and activate virtual environment:
-    ```bash
-    pip install uv
-    uv venv .venv
-    # Windows
-    .venv\Scripts\activate
-    # Unix/MacOS
-    source .venv/bin/activate
-    ```
+#### Option 1: Docker Setup (Recommended)
+3. Create `.env` file as shown above
+4. Build the Docker image:
+     ```bash
+     docker image build -t my-mcp .
+     ```
+5. Run the container:
+     ```bash
+     docker container run -it my-mcp
+     ```
+
+#### Option 2: Local Setup
+
+3. Create and activate virtual environment:
+     ```bash
+     pip install uv
+     uv venv .venv
+     # Windows
+     .venv\Scripts\activate
+     # Unix/MacOS
+     source .venv/bin/activate
+     ```
 
 
-3. Create a `.env` file in the root directory:
-    ```bash
-    AWS_ACCESS_KEY_ID=<your-aws-access-key-id>
-    AWS_SECRET_ACCESS_KEY=<your-aws-secret-access-key>
-    AWS_DEFAULT_REGION=<your-aws-region>
-    OPENAI_API_KEY=<your-openai-api-key>
-    ```
 
-4. Add EC2 instance configuration to `.env`:
-    ```bash
-    # EC2 Instance Configuration
-    AMI_ID=<your-ami-id>
-    INSTANCE_TYPE=<your-instance-type>
-    KEY_NAME=<your-key-pair-name>
-    SECURITY_GROUP_IDS=<your-security-group-ids>
-    AWS_REGION=<your-aws-region>
-    ```
-
-5. Run the application:
-    ```bash
-    cd openai-agent/
-    uv run agent.py
-    ```
+4. Run the application:
+     ```bash
+     cd openai-agent/
+     uv run agent.py
+     ```
 
 ### 💬 Using the AI Agent
 

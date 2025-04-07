@@ -46,7 +46,7 @@ async def main(query:str):
 if __name__ == "__main__":
     apply_env()
     # Let's make sure the user has npx installed
-    if not shutil.which("npx"):
+    if not shutil.which("uv"):
         raise RuntimeError("npx is not installed. Please install it with `npm install -g npx`.")
 
     while True:
